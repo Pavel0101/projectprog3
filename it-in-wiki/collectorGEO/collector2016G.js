@@ -1,11 +1,13 @@
 var fs = require('fs');
 var cheerio = require('cheerio');
 var request = require('request');
-var data0 = "15tviny.json";
-var data1 = "15tvinygenres.json";
-var url = "http://www.imdb.com/search/title?country_of_origin=am&release_date=2015";
+var data0 = "16tvinyg.json";
+var data1 = "16tvinygenresg.json";
+var url = "http://www.imdb.com/search/title?country_of_origin=ge&release_date=2016";
 var zang = [];
 var zang1 =[];
+fs.appendFile(data0," ");
+fs.appendFile(data1," ");
 request(url, function(error, response, html) {
     if (!error) {
         var $ = cheerio.load(html);
@@ -23,3 +25,4 @@ request(url, function(error, response, html) {
 });
 
 
+ 

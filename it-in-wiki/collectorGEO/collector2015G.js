@@ -1,11 +1,12 @@
 var fs = require('fs');
 var cheerio = require('cheerio');
 var request = require('request');
-var data0 = "15tviny.json";
-var data1 = "15tvinygenres.json";
-var url = "http://www.imdb.com/search/title?country_of_origin=am&release_date=2015";
+var data0 = "15tvinyg.json";
+var data1 = "15tvinygenresg.json";
+var url = "http://www.imdb.com/search/title?country_of_origin=ge&release_date=2015";
 var zang = [];
 var zang1 =[];
+fs.appendFile("collector2016G.js"," ");
 request(url, function(error, response, html) {
     if (!error) {
         var $ = cheerio.load(html);
